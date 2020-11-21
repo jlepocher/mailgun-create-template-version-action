@@ -1,0 +1,4 @@
+node_modules/.bin/sshpk-conv
+node_modules/.bin/sshpk-sign
+node_modules/.bin/sshpk-verify
+node_modules/.bin/uuid
