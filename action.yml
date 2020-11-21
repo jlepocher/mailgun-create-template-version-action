@@ -1,0 +1,22 @@
+name: 'Create Mailgun Template Version'
+description: 'Create a new version for the provided Mailgun email template using the content of an HTML file, and set it as the active version.'
+inputs:
+  mailgun-api-key:
+    description: 'Mailgun Primary Account API key'
+    required: true
+  mailgun-host:
+    description: 'Mailgun Host. Default: api.mailgun.net'
+    required: false
+    default: api.mailgun.net
+  mailgun-domain-name:
+    description: 'Domain Name the template is registered under'
+    required: true
+  mailgun-template-name:
+    description: 'Name of the Mailgun template'
+    required: true  
+  html-file-path:
+    description: 'Path to file containing the HTML for the new template version'
+    required: true  
+runs:
+  using: 'node12'
+  main: 'index.js'
