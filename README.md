@@ -25,11 +25,15 @@ This GitHub action creates a new version for an existing Mailgun template in you
 
 ## Example usage
 ```
-uses: jlepocher/mailgun-create-template-version-action@v1.0
-with:
-  mailgun-host: 'api.eu.mailgun.net'
-  mailgun-api-key: ${{ secrets.MAILGUN_API_KEY }}
-  mailgun-domain-name: 'mydomain.com'
-  mailgun-template-name: 'main'
-  html-file-path: './html/emails/main_template.html'
+# Check out your repo, so the action can access your HTML file
+- name: Checkout
+  uses: actions/checkout@v2
+- name: Create email template version
+  uses: jlepocher/mailgun-create-template-version-action@v1.1
+  with:
+    mailgun-host: 'api.eu.mailgun.net'
+    mailgun-api-key: ${{ secrets.MAILGUN_API_KEY }}
+    mailgun-domain-name: 'mydomain.com'
+    mailgun-template-name: 'main'
+    html-file-path: './html/emails/main_template.html'
 ```
