@@ -29,7 +29,7 @@ This GitHub action creates a new version for an existing Mailgun template in you
 - name: Checkout
   uses: actions/checkout@v2
 - name: Create email template version
-  uses: jlepocher/mailgun-create-template-version-action@v1.1
+  uses: jlepocher/mailgun-create-template-version-action@v1.2
   with:
     mailgun-host: 'api.eu.mailgun.net'
     mailgun-api-key: ${{ secrets.MAILGUN_API_KEY }}
